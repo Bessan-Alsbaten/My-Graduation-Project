@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking To Meet</title>
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="styler.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <form id="time_picker" action="book" method="post">
+
+    <header id="NAVBAR"></header>
+    <div id="style_container">
+      <div class="styler_header">Pick Your Date And Time To Meet Dr.Mo’taz Al-hami</div>
+      <!-- <form id="time_picker" action="book" method="post"> -->
+        <input class="inputz" name="dateBook" id="date" type="date" required />
+        <br />
+        <select class="inputz" name="hourOption" id="time" name="option" required>
+          <option value="" disabled selected>Select Your Time </option>
+          <option value="08-09">08:00 AM to 09:00 AM</option>
+          <option value="09-10">09:00 AM to 10:00 AM</option>
+          <option value="10-11">10:00 AM to 11:00 AM</option>
+          <option value="11-12">11:00 AM to 12:00 PM</option>
+          <option value="12-13">12:00 PM to 01:00 PM</option>
+          <option value="14-15">02:00 PM to 03:00 PM</option>
+          <option value="15-16">03:00 PM to 04:00 PM</option>
+          <option value="16-17">04:00 PM to 05:00 PM</option>
+          <option value="17-18">05:00 PM to 06:00 PM</option>
+        </select>
+        <br />
+        <input class="inputz" id="time_btn" type="submit" value="BOOK" a href="#" />
+      
+              <div class="styler_header"></div>
+      <div id="styler_grid">
+              <form id="time_pickerr" action="">
+                  <!--   <input class="inputzz" id="time_btn" type="submit" value="View The Official Page Of Dr" />-->
+                  
+                  <button id="time_btn"><a href="https://staff.hu.edu.jo/default.aspx?id=9NxBQYgZChE=">View The Official Page Of Dr</a></button>
+                  
+			 </form >
+          
+			 <form id="time_pickerr" action="">
+                  <!--   <input class="inputzz" id="time_btn" type="submit" value="View The Official Page Of Dr" />-->
+                  
+                  <button id="time_btn"> 
+                      <a href="https://teams.microsoft.com/l/profile/{معرف المستخدم}/{رمز التعريف الفريد}">
+Contact Dr On The Teams</a></button>
+                  
+			 </form >
+          <form id="time_pickerr" action="">
+                  <!--   <input class="inputzz" id="time_btn" type="submit" value="View The Official Page Of Dr" />-->
+                  
+                  <button id="time_btn"><a href="mailto:motaz@hu.edu.jo.com">Contact The Dr Via Email</a></button>
+                  
+			 </form >
+			 
+             <!-- <form id="time_pickerr" action="file:///C:/Users/Toshiba/OneDrive/Desktop/proj%20test2/html/feedbackForm.html">
+                     <input class="inputzzz" id="time_btn" type="submit" value="Feedback" />
+			 </form >-->
+      </div>
+    </div>
+    <footer id="footer-main"></footer>
+</form>
+  </body>
+  <script type="text/javascript">
+    $(function () {
+      var dtToday = new Date();
+
+      var month = dtToday.getMonth() + 1;
+      var day = dtToday.getDate();
+      var year = dtToday.getFullYear();
+      if (month < 10) month = "0" + month.toString();
+      if (day < 10) day = "0" + day.toString();
+      var maxDate = year + "-" + month + "-" + day;
+      $("#date").attr("min", maxDate);
+    });
+	
+	
+var btn = document.getElementById('time_btn');
+
+btn.addEventListener('click', () => {
+     alert('Your reservation has been completed successfully');
+});
+	  
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</html>
+<script type="module" src="../scripts/styler.js"></script>
